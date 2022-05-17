@@ -1,27 +1,8 @@
-const dashboardButton = document.querySelector('#dashboard-button');
-const exercisesButton = document.querySelector('#exercises-button');
-const logoutButton = document.querySelector('#logout-button');
-const setsButton = document.querySelector('#sets-button');
 const table = document.querySelector('tbody');
-
-setsButton.addEventListener('click', () => location.replace('sets.html'));
-
-dashboardButton.addEventListener('click', () => location.replace('dashboard.html'));
-
-exercisesButton.addEventListener('click', () => location.replace('add.html'));
-
-logoutButton.addEventListener('click', () => {
-  localStorage.removeItem('token');
-  location.replace('login.html');
-});
+const url = 'http://localhost:8080/v1';
 
 const getSets = () => {
-  if (!localStorage.getItem('token')) {
-    console.log('lopas');
-    return location.replace('login.html');
-  }
-
-  fetch('http://localhost:8080/v1/sets/', {
+  fetch(`${url}/sets/`, {
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,
     },
@@ -46,4 +27,13 @@ const getSets = () => {
     });
 };
 
-getSets();
+const pageRun = () => {
+  if (!localStorage.getItem('token')) {
+    return location.replace('login.html');
+  } else {
+    document.querySelector('.profile-name').innerHTML = localStorage.getItem('name');
+    getSets();
+  }
+};
+
+pageRun();

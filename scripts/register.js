@@ -4,9 +4,7 @@ const form = document.querySelector('form');
 const forgotPass = document.querySelector('.forgot-password');
 const login = document.querySelector('.login-now');
 
-login.addEventListener('click', () => {
-  location.replace('login.html');
-});
+login.addEventListener('click', () => location.replace('login.html'));
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

@@ -1,35 +1,6 @@
 const url = 'http://localhost:8080/v1';
 
-const dashboardButton = document.querySelector('#dashboard-button');
-
-const exercisesButton = document.querySelector('#add-button');
-
-const logoutButton = document.querySelector('#logout-button');
-
-const setsButton = document.querySelector('#sets-button');
-
-dashboardButton.addEventListener('click', () => {
-  location.replace('dashboard.html');
-});
-
-exercisesButton.addEventListener('click', () => {
-  location.replace('add.html');
-});
-
-logoutButton.addEventListener('click', () => {
-  localStorage.removeItem('token');
-  location.replace('login.html');
-});
-
-setsButton.addEventListener('click', () => {
-  location.replace('sets.html');
-});
-
 const displayExercises = () => {
-  if (!localStorage.getItem('token')) {
-    return location.replace('login.html');
-  }
-
   fetch(`${url}/exercises/`, {
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -57,8 +28,6 @@ const displayExercises = () => {
     });
 };
 
-displayExercises();
-
 function createElement(type, props, ...children) {
   const element = document.createElement(type); /// p
   if (props) Object.assign(element, props);
@@ -69,3 +38,14 @@ function createElement(type, props, ...children) {
   }
   return element;
 }
+
+const pageRun = () => {
+  if (!localStorage.getItem('token')) {
+    return location.replace('login.html');
+  } else {
+    document.querySelector('.profile-name').innerHTML = localStorage.getItem('name');
+    displayExercises();
+  }
+};
+
+pageRun();

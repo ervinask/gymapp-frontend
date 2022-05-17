@@ -9,14 +9,21 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <section>
-      <h1 class="app-title">Gym Application</h1>
+    <header>
+      <h1 class="app-title">Gym Applications</h1>
       <article class="header">
         <button class="button-2" id="dashboard-button">Dashboard</button>
         <button class="button-2" id="add-button">Add</button>
         <button class="button-2" id="sets-button">Sets</button>
         <button class="button-2" id="logout-button">Logout</button>
+        <div class="profile">
+          <div class="profile-image"></div>
+          <p class="profile-name"></p>
+          <div class="profile-overlay"></div>
+        </div>
       </article>
+    </header>
+    <section>
       <form>
         <p class="sub-title">Add new set</p>
         <label for="exercise_name" class="labels">Choose exercise name:</label>
@@ -30,6 +37,7 @@
         <button type="submit" class="button" id="login-button">Add exercise</button>
       </form>
     </section>
+    <script src="./scripts/buttons.js"></script>
     <script src="./scripts/add.js"></script>
   </body>
 </html>
