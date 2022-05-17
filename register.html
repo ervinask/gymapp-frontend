@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="app-title">Gym Application</h1>
+      <article>
+        <form>
+          <p class="sub-title">Create new account</p>
+          <label for="email" class="labels">Enter email:</label>
+          <input type="email" class="inputs" id="email" placeholder="Email..." required />
+          <label for="name" class="labels">Enter name:</label>
+          <input type="text" class="inputs" id="name" placeholder="Name..." required />
+          <label for="password" class="labels">Enter password:</label>
+          <input type="password" class="inputs" id="password" placeholder="Password..." required />
+          <button type="submit" class="button" id="register-button">Register</button>
+        </form>
+      </article>
+      <div class="additional-options-tab">
+        <p class="forgot-password">Forgot password?</p>
+        <p class="login-now">Already have an account?</p>
+      </div>
+    </section>
+    <script src="./scripts/register.js"></script>
+  </body>
+</html>

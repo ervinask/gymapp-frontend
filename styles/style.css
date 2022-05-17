@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+/* Login Page */
+
+body {
+  background-color: #d3f2e9;
+}
+
+html {
+  font-family: 'Roboto Slab', serif;
+  font-size: 10px;
+}
+
+section {
+  text-align: center;
+}
+
+.app-title {
+  color: #08706e;
+  font-size: 4.5rem;
+  margin: 1rem 0;
+}
+
+article {
+  margin-top: 2rem;
+}
+
+form {
+  background-color: #a5c6bc;
+  border-radius: 2rem;
+  border: 1px solid #000;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 42rem;
+}
+
+.sub-title {
+  color: #08706e;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.labels {
+  color: #659991;
+  font-size: 2.1rem;
+  text-align: left;
+  margin: 0 3.5rem;
+}
+
+.inputs {
+  font-size: 2rem;
+  margin: 1rem auto 2rem;
+  padding: 1rem 0.3rem;
+  width: 34rem;
+}
+
+.button {
+  border-radius: 0 0 2rem 2rem;
+  border-top: 0.1rem solid black;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  height: 5.3rem;
+  margin-top: 2.9rem;
+}
+
+#login-button:hover,
+#register-button:hover {
+  background-color: #659991;
+  color: #fff;
+}
+
+.additional-options-tab {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 42rem;
+}
+
+.forgot-password,
+.register-now,
+.login-now {
+  color: #08706e;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 2rem;
+}
+
+.forgot-password:hover,
+.register-now:hover,
+.login-now:hover {
+  color: #659991;
+}
+
+/* Dashboard */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto;
+  width: 58rem;
+}
+
+.button-2 {
+  border-radius: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1.8rem;
+  height: 4rem;
+  width: 18rem;
+}
+
+.button-2:hover {
+  background-color: #659991;
+  color: #fff;
+}
+
+.button-3 {
+  border-radius: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1.8rem;
+  height: 6rem;
+  width: 18rem;
+}
+
+#exercise-desc {
+  height: 10rem;
+}
+
+/* Exercises display */
+
+.exercises-con {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  row-gap: 6rem;
+}
+
+.exercise {
+  width: 34rem;
+  height: 38rem;
+  background-color: #a5c6bc;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2rem;
+}
+
+.exercise-name-display {
+  font-size: 3rem;
+  text-align: center;
+  color: #08706e;
+  margin-bottom: 1.5rem;
+}
+
+.exercise-video-display {
+  display: block;
+  margin: 0 auto;
+}
+
+.exercise-desc-display {
+  margin: 2rem 2rem;
+  color: #659991;
+  font-size: 1.2rem;
+}
+
+.error-msg {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #de2c2c;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  width: 70rem;
+  text-align: left;
+  margin: auto;
+  font-size: 2rem;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #000;
+  color: #fff;
+}
+
+tbody {
+  background-color: #659991;
+  color: #fff;
+}
+
+td,
+th {
+  padding: 1rem;
+  border: 0.2rem solid #000;
+  width: calc(100% / 4);
+}
