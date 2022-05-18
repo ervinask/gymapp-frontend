@@ -23,6 +23,9 @@ const getSets = () => {
 
         const td3 = tr.insertCell();
         td3.textContent = element.sets;
+
+        const td4 = tr.insertCell();
+        td4.textContent = element.time;
       });
     });
 };

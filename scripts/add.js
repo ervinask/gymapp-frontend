@@ -9,8 +9,11 @@ form.addEventListener('submit', (e) => {
   let reps = e.target.elements.reps.value;
   let sets = e.target.elements.sets.value;
   let exercise_id = document.querySelector('#exercise_name').value;
+  let time = new Date().toUTCString();
+  console.log(time);
 
-  addExercise({ weight, reps, sets, exercise_id });
+  addExercise({ weight, reps, sets, exercise_id, time });
+  location.replace('sets.html');
 });
 
 const addExercise = async (exerciseData) => {

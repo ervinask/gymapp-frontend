@@ -192,7 +192,7 @@ table {
   font-size: 2rem;
   margin: auto;
   text-align: left;
-  width: 70rem;
+  width: 90rem;
 }
 
 thead {
@@ -207,9 +207,19 @@ tbody {
 
 td,
 th {
+  width: 10%;
   border: 0.2rem solid #000;
   padding: 1rem;
-  width: calc(100% / 4);
+}
+
+td:nth-child(1),
+th:nth-child(1) {
+  width: 20%;
+}
+
+td:last-child,
+th:last-child {
+  width: 50%;
 }
 
 /* Profile display */
@@ -227,6 +237,7 @@ th {
   cursor: pointer;
   height: 4rem;
   width: 4rem;
+  margin: 0 auto;
 }
 
 .profile-name {
@@ -248,4 +259,5 @@ th {
   position: absolute;
   top: 0;
   width: 4rem;
+  margin: 0 auto;
 }
