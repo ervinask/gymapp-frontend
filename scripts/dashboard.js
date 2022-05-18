@@ -48,4 +48,6 @@ const pageRun = () => {
   }
 };
 
-pageRun();
+window.onload = () => {
+  pageRun();
+};
