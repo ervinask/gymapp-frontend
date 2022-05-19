@@ -3,6 +3,7 @@ const form = document.querySelector('form');
 
 const forgotPass = document.querySelector('.forgot-password');
 const register = document.querySelector('.register-now');
+const btnCloseModal = document.querySelector('.close-modal');
 
 register.addEventListener('click', () => location.replace('register.html'));
 
@@ -27,14 +28,15 @@ const login = async (loginData) => {
   localStorage.setItem('token', data.token);
   localStorage.setItem('name', data.name);
   if (data.err) {
+    document.querySelector('.modal').classList.remove('hidden');
+    document.querySelector('.overlay').classList.remove('hidden');
     return (document.querySelector('.error-msg').innerHTML = data.err);
   } else {
     return location.replace('dashboard.html');
   }
 };
 
-// Removing error msg if user is trying to write new email
-
-document.querySelector('#email').addEventListener('input', () => {
-  document.querySelector('.error-msg').innerHTML = '';
+btnCloseModal.addEventListener('click', function () {
+  document.querySelector('.modal').classList.add('hidden');
+  document.querySelector('.overlay').classList.add('hidden');
 });

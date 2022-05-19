@@ -15,13 +15,13 @@
         <button class="button-2" id="dashboard-button">Dashboard</button>
         <button class="button-2" id="add-button">Add</button>
         <button class="button-2" id="sets-button">Sets</button>
+        <button class="button-2" id="settings-button">Settings</button>
       </article>
     </header>
     <section>
       <article>
         <form>
           <p class="sub-title">Login before starting</p>
-          <p class="error-msg"></p>
           <label for="email" class="labels">Enter email:</label>
           <input type="email" class="inputs" id="email" placeholder="Email..." required />
           <label for="password" class="labels">Enter password:</label>
@@ -34,6 +34,12 @@
         <p class="register-now">Register Now!</p>
       </div>
     </section>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <img src="./images/error.png" alt="Error" class="error-icon" />
+      <p class="error-msg"></p>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="./scripts/buttons.js"></script>
     <script src="./scripts/login.js"></script>
   </body>

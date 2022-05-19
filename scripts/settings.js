@@ -1,5 +1,6 @@
 const url = 'http://localhost:8080/v1';
 const form = document.querySelector('form');
+const btnCloseModal = document.querySelector('.close-modal');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -20,4 +21,14 @@ const changePass = async (exerciseData) => {
     body: JSON.stringify(exerciseData),
   });
   const data = await res.json();
+  if (data.err) {
+    document.querySelector('.modal').classList.remove('hidden');
+    document.querySelector('.overlay').classList.remove('hidden');
+    return (document.querySelector('.error-msg').innerHTML = data.err);
+  }
 };
+
+btnCloseModal.addEventListener('click', function () {
+  document.querySelector('.modal').classList.add('hidden');
+  document.querySelector('.overlay').classList.add('hidden');
+});
