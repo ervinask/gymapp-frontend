@@ -43,7 +43,8 @@ article {
   margin-top: 2rem;
 }
 
-form {
+form,
+.account-information-con {
   background-color: #a5c6bc;
   border-radius: 2rem;
   border: 1px solid #000;
@@ -267,5 +268,39 @@ th:last-child {
   position: absolute;
   top: 0;
   width: 4rem;
-  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* Settings */
+
+.account-information-con {
+  width: 60rem;
+  justify-content: start;
+}
+
+.account-information {
+  display: flex;
+  padding: 1rem 2rem 0;
+  gap: 2rem;
+}
+
+.email-title,
+.name-title {
+  font-size: 2rem;
+  color: #08706e;
+}
+
+.user-email,
+.user-name {
+  font-size: 2rem;
+  color: #08706e;
+  opacity: 0.5;
+}
+
+.change-password {
+  text-align: left;
+  font-size: 1.3rem;
+  color: #08706e;
+  padding: 1rem 2rem 2rem;
 }

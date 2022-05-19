@@ -14,8 +14,8 @@
       <article class="header">
         <button class="button-2" id="dashboard-button">Dashboard</button>
         <button class="button-2" id="add-button">Add</button>
-        <button class="button-2 active-button" id="sets-button">Sets</button>
-        <button class="button-2" id="settings-button">Settings</button>
+        <button class="button-2" id="sets-button">Sets</button>
+        <button class="button-2 active-button" id="settings-button">Settings</button>
         <button class="button-2" id="logout-button">Logout</button>
         <div class="profile">
           <div class="profile-image"></div>
@@ -26,21 +26,17 @@
     </header>
 
     <section>
-      <table>
-        <thead>
-          <tr>
-            <th>Exercise</th>
-            <th>Weight</th>
-            <th>Reps</th>
-            <th>Sets</th>
-            <th>Time</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <form>
+        <p class="sub-title">Change password</p>
+        <label for="oldPassword" class="labels">Enter old password:</label>
+        <input type="text" class="inputs" id="oldPassword" required />
+        <label for="newPassword" class="labels">Enter new password:</label>
+        <input type="text" class="inputs" id="newPassword" required />
+        <button type="submit" class="button" id="login-button">Change password</button>
+      </form>
     </section>
 
     <script src="./scripts/buttons.js"></script>
-    <script src="./scripts/sets.js"></script>
+    <script src="./scripts/settings.js"></script>
   </body>
 </html>
