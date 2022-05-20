@@ -35,7 +35,6 @@ const pageRun = () => {
     return location.replace('login.html');
   } else {
     document.querySelector('.profile-name').innerHTML = localStorage.getItem('name');
-    document.querySelector('.profile-name-big').innerHTML = localStorage.getItem('name');
     getSets();
   }
 };

@@ -25,6 +25,8 @@ const changePass = async (exerciseData) => {
     document.querySelector('.modal').classList.remove('hidden');
     document.querySelector('.overlay').classList.remove('hidden');
     return (document.querySelector('.error-msg').innerHTML = data.err);
+  } else {
+    location.replace('dashboard.html');
   }
 };
 
@@ -32,3 +34,13 @@ btnCloseModal.addEventListener('click', function () {
   document.querySelector('.modal').classList.add('hidden');
   document.querySelector('.overlay').classList.add('hidden');
 });
+
+const pageRun = () => {
+  if (!localStorage.getItem('token')) {
+    return location.replace('login.html');
+  } else {
+    document.querySelector('.profile-name').innerHTML = localStorage.getItem('name');
+  }
+};
+
+pageRun();
